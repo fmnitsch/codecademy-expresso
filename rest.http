@@ -1,0 +1,121 @@
+GET  http://localhost:4000/api/employees 
+
+###
+
+POST http://localhost:4000/api/employees HTTP/1.1
+content-type: application/json
+
+{
+    "employee": {
+        "name": "New Employee",
+        "position": "Position",
+        "wage": 30
+    }
+}
+
+###
+
+GET  http://localhost:4000/api/employees/2
+
+###
+
+PUT http://localhost:4000/api/employees/2 HTTP/1.1
+content-type: application/json
+
+{
+    "employee": {
+        "name": "Updated Employee",
+        "position": "Updated Position",
+        "wage": 35
+    }
+}
+
+###
+
+DELETE  http://localhost:4000/api/employees/3
+
+###
+
+GET  http://localhost:4000/api/employees/1/timesheets
+
+###
+
+POST http://localhost:4000/api/employees/1/timesheets HTTP/1.1
+content-type: application/json
+
+{
+    "timesheet": {
+        "hours": 10,
+        "rate": 3.5,
+        "date": 100
+    }
+}
+
+###
+
+PUT http://localhost:4000/api/employees/1/timesheets/3 HTTP/1.1
+content-type: application/json
+
+{
+    "timesheet": {
+        "hours": 20,
+        "rate": 5.5,
+        "date": 120
+    }
+}
+
+###
+
+DELETE  http://localhost:4000/api/employees/1/timesheets/3
+
+###
+
+GET http://localhost:4000/api/menus
+
+###
+
+POST http://localhost:4000/api/menus HTTP/1.1
+content-type: application/json
+
+{
+    "menu": {
+        "title": "New Menu"
+    }
+}
+
+###
+
+GET  http://localhost:4000/api/menus/1/
+
+###
+
+PUT http://localhost:4000/api/menus/4 HTTP/1.1
+content-type: application/json
+
+{
+    "menu": {
+        "title": "WOWOW Menu"
+    }
+}
+
+###
+
+DELETE http://localhost:4000/api/menus/4
+
+###
+
+GET http://localhost:4000/api/menus/2/menu-items
+
+###
+
+POST http://localhost:4000/api/menus/2/menu-items HTTP/1.1
+content-type: application/json
+
+{
+    "menuItem": {
+        "name": "New Menu Item",
+        "description": "New Description",
+        "inventory": 20,
+        "price": 1.5
+    }
+}
